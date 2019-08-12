@@ -113,8 +113,8 @@ class CGRreactor:
             atom = products.atom(n)
             if atom.element is None or len(atom.element) > 1:
                 raise ValueError('new atoms in patch should be static')
-            elif atom.neighbors or atom.hybridization:
-                warning('neighbors and hybridization for new atoms unusable')
+            # elif atom.neighbors or atom.hybridization:
+            #     warning('neighbors and hybridization for new atoms unusable')
             absolute_atom[n].update(element=atom.element[0], charge=atom.charge,
                                     isotope=atom.isotope, multiplicity=atom.multiplicity,
                                     x=atom.x, y=atom.y, z=atom.z, stereo=atom.stereo)

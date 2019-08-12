@@ -20,11 +20,11 @@ from networkx.algorithms.isomorphism import GraphMatcher
 from .cgr import CGRContainer
 from .common import BaseContainer
 from .molecule import MoleculeContainer
-from ..algorithms import SmilesQuery, SmilesQueryCGR
+from ..algorithms import SmilesQuery, SmilesQueryCGR, DepictQuery
 from ..attributes import QueryAtom, DynQueryAtom, Bond, DynBond
 
 
-class QueryContainer(SmilesQuery, BaseContainer):
+class QueryContainer(SmilesQuery, BaseContainer, DepictQuery):
     node_attr_dict_factory = QueryAtom
     edge_attr_dict_factory = Bond
 
